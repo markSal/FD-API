@@ -46,7 +46,7 @@
 			// Check if position is vacant
 			if(empty($position->work_shifts[0]->work_type->name) && $assignment_vacancy == 1){
 				
-				// If vacant store filtered data in $schedule_info array
+				// If position is vacant, store filtered data in $schedule_info array
 				
 				// Store assignment name
 				$schedule_info[$i]['assignment'] = $assignment_name;
@@ -71,7 +71,7 @@
 				$i++;
 			}else{
 				
-				// If not a vacant position, skip this record and go to the next (we filtering out filled positions)
+				// If position is not a vacant, skip this record and go to the next (we're filtering out filled positions here)
 				continue;
 			}
 		}
